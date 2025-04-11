@@ -31,3 +31,20 @@ def resize_x0p75(img: np.ndarray):
     img_y /= 16
 
     return img_y
+
+
+def resize_x0p5(img: np.ndarray):
+    assert img.dtype == np.float32 or img.dtype == np.float64, "invalid dtype"
+    assert img.ndim == 2 or img.ndim == 3, "invalid shape"
+
+    dtype = img.dtype
+
+    h, w = img.shape[:2]
+
+    assert (w % 2) == 0 and (h % 2) == 0, "invalid size"
+
+    img_resize = img[0::2, 0::2] + img[1::2, 0::2] + img[0::2, 1::2] + img[1::2, 1::2]
+
+    img_resize /= 4
+
+    return img_resize
