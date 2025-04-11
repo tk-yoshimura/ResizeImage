@@ -1,7 +1,11 @@
 import numpy as np
 
 
-def resize_x0p75(img: np.ndarray):
+def resize_x0p75(img: np.ndarray) -> np.ndarray:
+    """
+       Image Downscaling x0.75 
+    """
+
     assert img.dtype == np.float32 or img.dtype == np.float64, "invalid dtype"
     assert img.ndim == 2 or img.ndim == 3, "invalid shape"
 
@@ -33,11 +37,13 @@ def resize_x0p75(img: np.ndarray):
     return img_y
 
 
-def resize_x0p5(img: np.ndarray):
+def resize_x0p5(img: np.ndarray) -> np.ndarray:
+    """
+       Image Downscaling x0.5 
+    """
+
     assert img.dtype == np.float32 or img.dtype == np.float64, "invalid dtype"
     assert img.ndim == 2 or img.ndim == 3, "invalid shape"
-
-    dtype = img.dtype
 
     h, w = img.shape[:2]
 
