@@ -24,7 +24,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="downscale.py" />
+    <Compile Include="resize.py" />
     <Compile Include="test_downscale.py">
       <SubType>Code</SubType>
     </Compile>

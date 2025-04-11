@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-from downscale import resize_x0p75, resize_x0p5, resize_x0p25
+from resize import resize_x0p75, resize_x0p5, resize_x0p25
 
 import unittest
 
