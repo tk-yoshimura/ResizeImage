@@ -54,3 +54,13 @@ def resize_x0p5(img: np.ndarray) -> np.ndarray:
     img_resize /= 4
 
     return img_resize
+
+
+def resize_x0p25(img: np.ndarray) -> np.ndarray:
+    """
+       Image Downscaling x0.25 
+    """
+
+    img_resize = resize_x0p5(resize_x0p5(img))
+
+    return img_resize
